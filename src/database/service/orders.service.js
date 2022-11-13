@@ -30,5 +30,5 @@ export async function saveOrder(data) {
     return Promise.reject(appError('Failed to save order'));
   }
   logger.info('New order saved', { data });
-  return await Order.create(data);
+  return Order.create(data);
 }
