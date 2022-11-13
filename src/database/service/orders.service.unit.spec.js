@@ -36,7 +36,7 @@ describe('Service > Orders', () => {
     const user = buildUser();
     const error = buildError(
       StatusCodes.INTERNAL_SERVER_ERROR,
-      `Failed to retrieve orders for user ${user.id}`,
+      `Failed to retrieve orders for user: ${user.id}`,
     );
 
     jest.spyOn(Order, 'findAll').mockRejectedValue(error);

@@ -42,7 +42,10 @@ export async function create(req, res, next) {
  * Ver orders.router.js.
  */
 export const validate = method => {
-  if (method === 'create') {
-    return [body('products', 'Please provide a list of products').exists()];
+  switch (method) {
+    case 'create':
+      return [body('products', 'Please provide a list of products').exists()];
+    default:
+      throw new Error('Please provide a valid method name');
   }
 };
