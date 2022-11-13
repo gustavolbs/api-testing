@@ -1,4 +1,4 @@
-import * as service from '@/database/service';
+import * as service from '../database/service';
 
 /**
  * MIDDLEWARES PARA AS ROTAS
