@@ -1,7 +1,7 @@
-import { appError } from '@/utils';
-import { findOrSave } from '@/database/service';
 import { ReasonPhrases, StatusCodes } from 'http-status-codes';
 import validator from 'validator';
+import { findOrSave } from '../database/service';
+import { appError } from '../utils/errors';
 
 /**
  * Valida a presença do e-mail na requisição

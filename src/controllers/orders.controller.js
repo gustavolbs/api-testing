@@ -42,9 +42,7 @@ export async function create(req, res, next) {
  * Ver orders.router.js.
  */
 export const validate = method => {
-  switch (method) {
-    case 'create': {
-      return [body('products', `Please provide a list of products`).exists()];
-    }
+  if (method === 'create') {
+    return [body('products', 'Please provide a list of products').exists()];
   }
 };
